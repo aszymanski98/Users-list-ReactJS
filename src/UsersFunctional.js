@@ -17,17 +17,19 @@ const UsersFunctional = (props) => {
             <form
                 onSubmit = { event => {
                     event.preventDefault();
-                    
+
                     let newUser = {
                         id: Date.now(),
                         name: input,
                     }
                     setUsers(users.concat(newUser));
+                    setInput('');
                 }}
             >
                 <input
                     type="text"
                     placeholder='Enter name'
+                    value={input}
                     onChange = { event => {
                         setInput(event.target.value);
                     }}
