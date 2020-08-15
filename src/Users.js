@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Users.css';
 import UsersList from './UsersList';
 
@@ -12,15 +12,15 @@ class Users extends Component {
         };
     }
 
-    deleteUser = (userID) => {
-        this.setState(state => {
-            return({
-                users: state.users.filter((user) => {return(user.id !== userID)})
+    deleteUser = userID => {
+        this.setState( state => {
+            return ({
+                users: state.users.filter( user => { return user.id !== userID })
             });
         })
     }
 
-    addUser = (event) => {
+    addUser = event => {
         event.preventDefault();
 
         let newUser = {
@@ -28,8 +28,8 @@ class Users extends Component {
             name: this._inputName.value,
         }
 
-        this.setState((state) => {
-            return({
+        this.setState( state => {
+            return ({
                 users: state.users.concat(newUser)
             });
         })
@@ -38,14 +38,14 @@ class Users extends Component {
     }
 
     render() {
-        return(
+        return (
             <div className='users-main'>
                 <h1>User's list</h1>
-                <form onSubmit = {this.addUser}>
-                    <input ref={(data) => {this._inputName = data;}} type="text" placeholder='Enter name'/>
+                <form onSubmit={this.addUser}>
+                    <input ref={ data => this._inputName = data } type="text" placeholder='Enter name' />
                     <button type='submit'>Add user</button>
                 </form>
-                <UsersList usersList={this.state.users} deleteUserMethod={this.deleteUser}/>
+                <UsersList usersList={this.state.users} deleteUserMethod={this.deleteUser} />
             </div>
 
         );
