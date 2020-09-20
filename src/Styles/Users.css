@@ -1,0 +1,50 @@
+.users-main form input {
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid #0066ff;
+  color: white;
+  width: 170px;
+  outline: 0;
+  font-family: "Crafty Girls", cursive;
+}
+
+h1 {
+  text-align: center;
+  color: #0066ff;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.users-main form button {
+  padding: 10px 15px;
+  font-size: 18px;
+  margin: 10px;
+  background-color: transparent;
+  border: 1px solid #0066ff;
+  color: #0066ff;
+  outline: 0;
+  cursor: pointer;
+
+  font-family: "Crafty Girls", cursive;
+}
+
+.users-main form button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px #0066ff;
+  transition: 0.5s;
+}
